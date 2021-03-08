@@ -4,7 +4,7 @@ let initialState = {
     maxPrice: 200000
 }
 
-const FilterReducer = (state = initialState) => {
+const FilterReducer = (state = initialState, actions) => {
     switch (actions.type) {
         case 'BS/FILTER/CHANGE_MIN_PRICE':
             return {...state, minPrice: actions.minPrice}

@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ant-checkbox-wrapper {
+  margin: 0!important;
+}
+
 code {
   font-family:"Montserrat", source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
