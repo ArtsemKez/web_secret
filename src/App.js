@@ -4,6 +4,7 @@ import Layout, {Content} from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
 import {Filter} from "./components/filter/Filter";
 import 'antd/dist/antd.css';
+import {CatalogPage} from "./components/сatalog/Catalog";
 
 
 const LayoutComponent = styled.div`
@@ -31,7 +32,7 @@ function App() {
                    >
                   <LayoutComponent>
                       <Sider style={{ background: '#FFFFFF' }} ><Filter/></Sider>
-                      <Content style={{ background: '#FFFFFF' }}>Content</Content>
+                      <Content style={{ background: '#FFFFFF' }}><CatalogPage/></Content>
                   </LayoutComponent>
               </Layout>
           </AppComponent>

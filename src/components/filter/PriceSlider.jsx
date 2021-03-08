@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Col, InputNumber, Row, Slider } from "antd";
 import { getMaxPrice, getMinPrice } from "../redux/filter-selectors";
-import { actions } from "../redux/filter-reducers";
+import { actions } from "../redux/filter-reducer";
 import "antd/dist/antd.css";
 
 export const PriceSlider = () => {
