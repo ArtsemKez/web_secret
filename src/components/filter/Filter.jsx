@@ -9,8 +9,8 @@ import {
 } from "./FilterStyled"
 import {PriceSlider} from "./PriceSlider";
 import {useSelector} from "react-redux";
-import {getTotalItems} from "../redux/filter-selectors";
 import {BrandList} from "./BrandList";
+import {getTotalItems} from "../redux/catalog-selectors";
 
 export const Filter = () => {
 

@@ -9,7 +9,7 @@ export const FilterStyled = styled.div`
 
 export const QuantityStyled = styled.text`
   position: relative;
-  width: 87px;
+  width: 100px;
   height: 20px;
 
   font-family: Montserrat;

@@ -1,16 +1,19 @@
+import {catalogAPI} from "../../api/api";
+
 let initialState = {
-    items: [
-        {
-            id: 1,
-            img: 'https://imgproxy.by.dev.family/fsS0b59DgGh9X4x4XraAqkcph5TAe3DSO-OLfcgi9LI/w:740/h:740/czM6Ly9nZXRsZW5zLzIyL0RTNGx4bE9XcVRrLmpwZw.webp',
-            name: 'Camera',
-            price: 10000,
-            new: true,
-        }
-    ]
+    products: [],
+    totalItems: 0
 }
+
+
 export const CatalogReducer = (state = initialState, actions) => {
     switch (actions.type) {
+
+        case 'WS/CATALOG/SET_ITEMS':
+            return {...state, products: actions.products}
+
+        case 'WS/CATALOG/SET_TOTAL/ITEMS':
+            return {...state, totalItems: actions.totalItems}
 
         default:
             return state;
@@ -18,7 +21,19 @@ export const CatalogReducer = (state = initialState, actions) => {
 }
 
 export const actions = {
+    setItems: (products) => ({type: 'WS/CATALOG/SET_ITEMS', products}),
+    setTotalItems: (totalItems) => ({type: 'WS/CATALOG/SET_TOTAL/ITEMS', totalItems}),
 
+}
+
+export const requestCatalog = () => {
+    return async (dispatch) => {
+        debugger
+        let Response = await catalogAPI.getCatalog()
+        dispatch(actions.setItems(Response.data.products))
+        dispatch(actions.setTotalItems(Response.data.meta.total))
+        debugger
+    }
 }
 
 export default CatalogReducer

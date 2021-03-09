@@ -1,18 +1,38 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from "styled-components";
 import {CatalogItem} from "./CatalogItem";
+import {useDispatch, useSelector} from "react-redux";
+import {getItems} from "../redux/catalog-selectors";
+import {requestCatalog} from "../redux/catalog-reducer";
+import {Col, Row} from "antd";
 
-const CatalogStyled = styled.div`
-  position: relative;
-  left: 50px;
+const CardStyled = styled.div`
+  display: grid;
+  position: relative; 
 `
 
 export const CatalogPage = () => {
-    return(
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(requestCatalog())
+    })
+
+    const products = useSelector(getItems)
+    return (
         <>
-            <CatalogStyled>
-                <CatalogItem/>
-            </CatalogStyled>
+            <CardStyled>
+                <Row gutter={[0, 0]}>
+                    {products.map((i) => (
+                        <Col span={6}>
+                            <CatalogItem
+                                item={i}
+                            />
+                        </Col>
+                    ))}
+                </Row>
+            </CardStyled>
         </>
     )
 }
