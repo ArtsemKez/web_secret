@@ -28,11 +28,9 @@ export const actions = {
 
 export const requestCatalog = () => {
     return async (dispatch) => {
-        debugger
         let Response = await catalogAPI.getCatalog()
         dispatch(actions.setItems(Response.data.products))
         dispatch(actions.setTotalItems(Response.data.meta.total))
-        debugger
     }
 }
 

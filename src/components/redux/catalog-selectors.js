@@ -21,6 +21,10 @@ export const getTotalItems = (state) => {
     return state.catalogPage.totalItems
 }
 
+export const getImage = (state) => {
+    return state.catalogPage.products.image.x1
+}
+
 
 
 

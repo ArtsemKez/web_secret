@@ -7,8 +7,8 @@ import {requestCatalog} from "../redux/catalog-reducer";
 import {Col, Row} from "antd";
 
 const CardStyled = styled.div`
-  display: grid;
-  position: relative; 
+ 
+  
 `
 
 export const CatalogPage = () => {
@@ -22,17 +22,17 @@ export const CatalogPage = () => {
     const products = useSelector(getItems)
     return (
         <>
-            <CardStyled>
-                <Row gutter={[0, 0]}>
+            {/*<CardStyled>*/}
+                <div>
                     {products.map((i) => (
-                        <Col span={6}>
+                        // <Col styles={{marginRight: '20px',   width: '25%!important'}}>
                             <CatalogItem
                                 item={i}
                             />
-                        </Col>
+                        // </Col>
                     ))}
-                </Row>
-            </CardStyled>
+                </div>
+            {/*</CardStyled>*/}
         </>
     )
 }

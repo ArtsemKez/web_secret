@@ -7,7 +7,8 @@ export const CatalogItemStyled = styled.div`
   border: 1px solid #E6E6E6;
   box-sizing: border-box;
   border-radius: 4px;
-  height: 400px;
+  margin-right: 20px;
+  width: 25%;
 `
 
 export const ImgStyled = styled.image`

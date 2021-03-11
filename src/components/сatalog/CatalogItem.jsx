@@ -7,7 +7,7 @@ export const CatalogItem = ({item}) => {
         <>
             <CatalogItemStyled>
                 <ImgStyled>
-                    <Image></Image>
+                    <Image>{item?.image?.desktop?.x1}</Image>
                 </ImgStyled>
                 <NameStyled>
                     {item.title}
@@ -19,6 +19,7 @@ export const CatalogItem = ({item}) => {
                     <Button>В карзину</Button>
                 </ButtonStyled>
             </CatalogItemStyled>
+
         </>
     )
 }
