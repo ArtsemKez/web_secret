@@ -1,5 +1,4 @@
 let initialState = {
-    totalItems: 115,
     minPrice: 0,
     maxPrice: 200000
 }

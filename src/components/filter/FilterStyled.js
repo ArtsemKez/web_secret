@@ -32,8 +32,6 @@ export const TitleStyled = styled.text`
   font-weight: bold;
   font-size: 32px;
   line-height: 140%;
-  /* identical to box height, or 45px */
-
 
   color: #1B1B1B;
 `
@@ -49,8 +47,6 @@ export const PriceTitleStyled = styled.text`
   font-weight: bold;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
-  
 `
 
 export const BrandListStyled = styled.div`
@@ -76,4 +72,5 @@ export const TitleBrandStyled = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 140%;`
+  line-height: 140%;
+`

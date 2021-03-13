@@ -25,9 +25,6 @@ export const Filter = () => {
                 <PriceSlider/>
                 <TitleBrandStyled>Бренд</TitleBrandStyled>
                 <BrandListStyled><BrandList/></BrandListStyled>
-
-
-
             </FilterStyled>
         </>
     )

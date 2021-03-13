@@ -4,12 +4,13 @@ import {CatalogItem} from "./CatalogItem";
 import {useDispatch, useSelector} from "react-redux";
 import {getItems} from "../redux/catalog-selectors";
 import {requestCatalog} from "../redux/catalog-reducer";
-import {Col, Row} from "antd";
 
-const CardStyled = styled.div`
- 
-  
+const CatalogPageStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  zoom: 100%;
 `
+
 
 export const CatalogPage = () => {
 
@@ -22,17 +23,13 @@ export const CatalogPage = () => {
     const products = useSelector(getItems)
     return (
         <>
-            {/*<CardStyled>*/}
-                <div>
-                    {products.map((i) => (
-                        // <Col styles={{marginRight: '20px',   width: '25%!important'}}>
-                            <CatalogItem
-                                item={i}
-                            />
-                        // </Col>
-                    ))}
-                </div>
-            {/*</CardStyled>*/}
+            <CatalogPageStyled>
+                {products.map((i) => (
+                    <CatalogItem
+                        item={i}
+                    />
+                ))}
+            </CatalogPageStyled>
         </>
     )
 }
