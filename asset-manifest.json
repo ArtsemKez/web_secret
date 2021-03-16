@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/web_secret/static/css/main.fda164c9.chunk.css",
+    "main.js": "/web_secret/static/js/main.6dfff0f5.chunk.js",
+    "main.js.map": "/web_secret/static/js/main.6dfff0f5.chunk.js.map",
+    "runtime-main.js": "/web_secret/static/js/runtime-main.2d2a1c64.js",
+    "runtime-main.js.map": "/web_secret/static/js/runtime-main.2d2a1c64.js.map",
+    "static/css/2.5fe5d33a.chunk.css": "/web_secret/static/css/2.5fe5d33a.chunk.css",
+    "static/js/2.60ae600c.chunk.js": "/web_secret/static/js/2.60ae600c.chunk.js",
+    "static/js/2.60ae600c.chunk.js.map": "/web_secret/static/js/2.60ae600c.chunk.js.map",
+    "static/js/3.bb089c9e.chunk.js": "/web_secret/static/js/3.bb089c9e.chunk.js",
+    "static/js/3.bb089c9e.chunk.js.map": "/web_secret/static/js/3.bb089c9e.chunk.js.map",
+    "index.html": "/web_secret/index.html",
+    "static/css/2.5fe5d33a.chunk.css.map": "/web_secret/static/css/2.5fe5d33a.chunk.css.map",
+    "static/css/main.fda164c9.chunk.css.map": "/web_secret/static/css/main.fda164c9.chunk.css.map",
+    "static/js/2.60ae600c.chunk.js.LICENSE.txt": "/web_secret/static/js/2.60ae600c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/web_secret/static/media/montserrat-vietnamese-400-normal.6325549b.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d2a1c64.js",
+    "static/css/2.5fe5d33a.chunk.css",
+    "static/js/2.60ae600c.chunk.js",
+    "static/css/main.fda164c9.chunk.css",
+    "static/js/main.6dfff0f5.chunk.js"
+  ]
+}
