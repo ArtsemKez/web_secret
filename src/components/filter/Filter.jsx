@@ -20,11 +20,6 @@ export const Filter = () => {
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        // dispatch(requestFilter())
-        dispatch(requestCatalog())
-    }, [] )
-
     return (
         <>
             <FilterStyled>

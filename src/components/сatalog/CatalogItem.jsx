@@ -16,7 +16,7 @@ export const CatalogItem = ({item}) => {
                     {item.price}₽
                 </PriceStyle>
                 <IsNewStyle>
-                    {item.is_new != false ? 'Новое' : ''}
+                    {item.is_new !== false ? 'Новое' : ''}
                 </IsNewStyle>
                 <ButtonStyle>
                     <Button

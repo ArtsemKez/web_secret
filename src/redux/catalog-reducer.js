@@ -4,7 +4,6 @@ let initialState = {
     products: [],
     minPrice: 0,
     maxPrice: 100000,
-    defMaxPrice: 100000,
     totalItems: 0,
     CanonCheckbox: false,
     NikonCheckbox: false,
@@ -23,8 +22,6 @@ export const CatalogReducer = (state = initialState, actions) => {
             return {...state, minPrice: actions.minPrice}
         case 'WS/FILTER/CHANGE_MAX_PRICE':
             return {...state, maxPrice: actions.maxPrice}
-        case  'WS/FILTER/CHANGE_DEF_MAX_PRICE':
-            return  {...state, defMaxPrice: actions.defMaxPrice}
         case 'WS/FILTER/SET_TOTAL_ITEMS':
             return {...state, totalItems: actions.totalItems}
         case 'WS/FILTER/CHANGE_CANON_CHECKBOX':
@@ -52,7 +49,6 @@ export const actions = {
     setTotalItems: (totalItems) => ({type: 'WS/FILTER/SET_TOTAL_ITEMS', totalItems}),
     changeMinPrice: (minPrice) => ({type: 'WS/FILTER/CHANGE_MIN_PRICE', minPrice}),
     changeMaxPrice: (maxPrice) => ({type: 'WS/FILTER/CHANGE_MAX_PRICE', maxPrice}),
-    changeDefMaxPrice: (defMaxPrice) => ({type: 'WS/FILTER/CHANGE_DEF_MAX_PRICE', defMaxPrice}),
     changeCanonCheckbox: (CanonCheckbox) => ({type: 'WS/FILTER/CHANGE_CANON_CHECKBOX', CanonCheckbox}),
     changeNikonCheckbox: (NikonCheckbox) => ({type: 'WS/FILTER/CHANGE_NIKON_CHECKBOX', NikonCheckbox}),
     changeFujiFilmCheckbox: (FujiFilmCheckbox) => ({type: 'WS/FILTER/CHANGE_FUJIFILM_CHECKBOX', FujiFilmCheckbox}),
@@ -62,12 +58,23 @@ export const actions = {
     changeOtherCheckbox: (otherCheckbox) => ({type: 'WS/FILTER/CHANGE_OTHER_CHECKBOX', otherCheckbox}),
 }
 
-export const requestCatalog = (minPrice, maxPrice) => {
+export const requestCatalog = (minPrice, maxPrice, CanonCheckbox,
+                               NikonCheckbox,
+                               FujiFilmCheckbox,
+                               SonyCheckbox,
+                               OlympusCheckbox,
+                               PanasonicCheckbox,
+                               otherCheckbox) => {
     return async (dispatch) => {
-        let Response = await catalogAPI.getCatalog(minPrice, maxPrice)
+        let Response = await catalogAPI.getCatalog(minPrice, maxPrice, CanonCheckbox,
+            NikonCheckbox,
+            FujiFilmCheckbox,
+            SonyCheckbox,
+            OlympusCheckbox,
+            PanasonicCheckbox,
+            otherCheckbox)
         dispatch(actions.setItems(Response.data.products))
         dispatch(actions.setTotalItems(Response.data.meta.total))
-        // dispatch(actions.changeDefMaxPrice(Response.data.filters[0].max))
     }
 }
 

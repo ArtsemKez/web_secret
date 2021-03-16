@@ -36,23 +36,23 @@ export const BrandList = () => {
     const onChangeCanonCheckbox = (CanonCheckbox) => {
         dispatch(actions.changeCanonCheckbox(CanonCheckbox.target.checked))
     }
-    const onChangeNikonCheckbox = (checkedValue) => {
-        dispatch(actions.changeCanonCheckbox(checkedValue))
+    const onChangeNikonCheckbox = (NikonCheckbox) => {
+        dispatch(actions.changeNikonCheckbox(NikonCheckbox.target.checked))
     }
     const onChangeFujiFilmCheckbox = (FujiFilmCheckbox) => {
-        dispatch(actions.changeCanonCheckbox(FujiFilmCheckbox))
+        dispatch(actions.changeFujiFilmCheckbox(FujiFilmCheckbox.target.checked))
     }
     const onChangeSonyCheckbox = (SonyCheckbox) => {
-        dispatch(actions.changeCanonCheckbox(SonyCheckbox))
+        dispatch(actions.changeSonyCheckbox(SonyCheckbox.target.checked))
     }
     const onChangeOlympusCheckbox = (OlympusCheckbox) => {
-        dispatch(actions.changeCanonCheckbox(OlympusCheckbox))
+        dispatch(actions.changeOlympusCheckbox(OlympusCheckbox.target.checked))
     }
     const onChangePanasonicCheckbox = (PanasonicCheckbox) => {
-        dispatch(actions.changeCanonCheckbox(PanasonicCheckbox))
+        dispatch(actions.changePanasonicCheckbox(PanasonicCheckbox.target.checked))
     }
     const onChangeOtherCheckbox = (otherCheckbox) => {
-        dispatch(actions.changeCanonCheckbox(otherCheckbox))
+        dispatch(actions.changeOtherCheckbox(otherCheckbox.target.checked))
     }
 
     return (
