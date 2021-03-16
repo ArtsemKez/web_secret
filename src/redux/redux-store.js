@@ -1,10 +1,8 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux"
 import thunkMiddleware from "redux-thunk"
-import FilterReducer from "./filter-reducer";
 import CatalogReducer from "./catalog-reducer";
 
 let rootReducer = combineReducers({
-    filterPage: FilterReducer,
     catalogPage: CatalogReducer
 })
 

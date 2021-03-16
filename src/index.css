@@ -13,6 +13,22 @@ body {
   margin: 0!important;
 }
 
+.ant-slider-track {
+  background-color: #FF681C!important;
+  height: 2px!important;
+}
+
+.ant-slider-handle {
+  height: 12px!important;
+  width: 12px!important;
+  margin-top: -5px!important;
+  border: solid 4px #1B1B1B!important;
+}
+
+.ant-slider-rail {
+  height: 2px!important;
+}
+
 code {
   font-family:"Montserrat", source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

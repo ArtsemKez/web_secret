@@ -10,6 +10,10 @@ export const CatalogItemStyle = styled.div`
   border-radius: 4px;
   margin-right: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 1460px) {
+    margin-right: auto;
+  }
   
   @media(max-width: 768px){
     min-width: 100%;

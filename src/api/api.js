@@ -6,10 +6,7 @@ export const instance = Axios.create({
 })
 
 export const catalogAPI = {
-    getCatalog() {
-        return instance.get(
-
-        )
+    getCatalog(minPrice, maxPrice) {
+        return instance.get(`?price%5Bmin%5D=${minPrice}&price%5Bmax%5D=${maxPrice}`)
     }
 }
-

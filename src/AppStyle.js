@@ -6,6 +6,9 @@ export const AppComponent = styled.div`
   max-width: 1400px;
   margin-left: auto !important;
   margin-right: auto !important;
+  min-width: 375px;
+  
+
 
   @media (max-width: 1280px) {
     width: calc(100% - 120px);
@@ -19,7 +22,8 @@ export const AppComponent = styled.div`
 `
 
 export const ContentStyle = styled.div`
-s  
+  margin-left: 38px;
+  
   @media (max-width: 1460px) {
     zoom: 90%;
   }
@@ -35,8 +39,9 @@ s
   @media (max-width: 768px) {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    left: 0;
     width: 100%;
+    min-width: 375px !important;
+
   }
 `
 
